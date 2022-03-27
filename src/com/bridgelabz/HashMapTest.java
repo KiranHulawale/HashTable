@@ -4,21 +4,21 @@ import java.util.ArrayList;
 
 public class HashMapTest {
 
-    private static class ListNode {
+    private static class MyMapNode {
         int count;
         String key;
-        ListNode next;
+        MyMapNode next;
 
-        public ListNode(String key) {
+        public MyMapNode(String key) {
             this.key = key;
             this.count = 1;
         }
     }
 
-    ListNode table[];
+    MyMapNode table[];
 
     public HashMapTest(int size) {
-        table = new ListNode[size];
+        table = new MyMapNode[size];
     }
 
     public void countWords(String str) {
