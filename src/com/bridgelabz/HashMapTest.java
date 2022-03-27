@@ -21,10 +21,6 @@ public class HashMapTest {
         table = new ListNode[size];
     }
 
-    public int hash(String key) {
-        return Math.abs(key.hashCode()) % table.length;
-    }
-
     public void countWords(String str) {
         for (String word : str.split(" ")) {
             System.out.println(" word: " + word);
