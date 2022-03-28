@@ -1,28 +1,25 @@
 package com.bridgelabz;
+
 import java.util.HashMap;
-import java.util.ArrayList;
 
 public class HashMapTest {
 
-    private static class ListNode {
+        private static class MyMapNode {
         int count;
         String key;
-        ListNode next;
+        MyMapNode next;
 
-        public ListNode(String key) {
+        public MyMapNode(String key) {
             this.key = key;
             this.count = 1;
         }
     }
 
-    ListNode table[];
+    MyMapNode table[];
 
-    public HashMapTest(int size) {
-        table = new ListNode[size];
-    }
-
-    public int hash(String key) {
-        return Math.abs(key.hashCode()) % table.length;
+    public HashMapTest() {
+        int size = 0;
+        table = new MyMapNode[size];
     }
 
     public void countWords(String str) {
@@ -30,4 +27,25 @@ public class HashMapTest {
             System.out.println(" word: " + word);
         }
     }
+
+    public int hash(String key) {
+        return Math.abs(key.hashCode()) % table.length;
+    }
+
+    static void remove(String str, String word)
+    {
+        String msg[] = str.split(" ");
+        String new_str = "";
+
+        for (String words : msg) {
+
+            // If desired word is found
+            if (!words.equals(word)) {
+                new_str += words + " ";
+            }
+        }
+        // Print the new String
+        System.out.print(new_str);
+    }
 }
+
